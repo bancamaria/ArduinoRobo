@@ -1,2 +1,0 @@
-HW2_Buzzer_Button:
-Using a knock detector buzzer, it will detect a knock; 5s after the knock, a buzzer will emit sounds; the sounds can be stopped by using a pushbutton.
