@@ -1,54 +1,59 @@
 const int knockPin = A0;
 const int buzzerPin = 8;
 const int buttonPin = 2;
-bool activeBuzzer = false;
+
+bool buzzerActive = false;
 long int lastKnock = 0;
+
 int knockTreshold = 100;
-bool knockCheck = false;
+bool knockHappened = false;
 const long int knockWait = 5000;
-const int buzzerInterval = 200;
-long int lastBuzzerState = 0;
+
+const int buzzerInterval = 100;
+long int lastBuzzerEvent = 0;
 bool buzzerState = false;
 
 void setup() {
+  pinMode(buzzerPin, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
   Serial.begin(9600);
-  pinMode(buzzerPin, INPUT);
-  pinMode(buttonPin, INPUT_PULLUP); // when the button is pressed
 }
 
 void loop() {
-  if(activeBuzzer) {
+  if(buzzerActive) {
     int buttonState = !digitalRead(buttonPin);
     if(buttonState == true) {
-      Serial.println("buzzer has stopped");
+      Serial.println("Alarm stopped via button!");
       digitalWrite(buzzerPin, LOW);
-      activeBuzzer = false;
-      knockCheck = false;
+      buzzerActive = false;
+      knockHappened = false;
       buzzerState = false;
     }
     else {
-      if (millis() - lastBuzzerState >= buzzerInterval) {
+      if(millis() - lastBuzzerEvent >= buzzerInterval) {
         buzzerState = !buzzerState;
         digitalWrite(buzzerPin, buzzerState);
-        lastBuzzerState = millis();
+        lastBuzzerEvent = millis();
       }
     }
   }
-  else if(knockCheck) {
-    if(millis() - lastKnock >= knockWait) {
-      Serial.println("buzzer has started at " + String(millis()));
-      digitalWrite(buzzerPin, HIGH);
-      lastBuzzerState = millis();
-      activeBuzzer = true;
-      buzzerState = true;
-    }
-  }
   else {
-    int knockLevel = Serial.parseInt();
-    if(knockLevel >= knockTreshold) {
-      knockCheck = true;
-      lastKnock = millis();
-      Serial.println(9600);
+    if(knockHappened) {
+       if(millis() - lastKnock >= knockWait) {
+         Serial.println("Alarm started at: " + String(millis()));
+         digitalWrite(buzzerPin, HIGH);
+         lastBuzzerEvent = millis();
+         buzzerActive = true;
+         buzzerState = true;
+       }
+    }
+    else {
+      int knockLevel = Serial.parseInt();
+      if(knockLevel >= knockTreshold) {
+        knockHappened = true;
+        lastKnock = millis();
+        Serial.println("Knock received at " + String(lastKnock));
+      }
     }
   }
 }
