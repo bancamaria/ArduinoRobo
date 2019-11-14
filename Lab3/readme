@@ -1,0 +1,8 @@
+button:
+counting how many times someone presses the button
+button2:
+when pressed, a LED is on and when the button is unpressed, the LED is off + viceversa
+buzzer:
+controlling a buzzer with a photocell
+photoCell:
+msking a LED turn on and off, but depending on a photocell
