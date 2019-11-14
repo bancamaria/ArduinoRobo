@@ -1,0 +1,12 @@
+Blink:
+Making a LED blink
+fade:
+Making a LED to fade its light
+potentiometer:
+Controlling the intensity of a LED using a potentiometer
+simpleRGB:
+Making a RGB LED to fade some colours
+sketch_oct31a:
+Getting to know how to use millis
+sketch_oct31b:
+Fading a LED
