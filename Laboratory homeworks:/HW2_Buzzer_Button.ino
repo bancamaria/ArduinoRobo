@@ -1,14 +1,11 @@
 const int knockPin = A0;
 const int buzzerPin = 8;
 const int buttonPin = 2;
-
 bool buzzerActive = false;
 long int lastKnock = 0;
-
 int knockTreshold = 100;
 bool knockHappened = false;
 const long int knockWait = 5000;
-
 const int buzzerInterval = 100;
 long int lastBuzzerEvent = 0;
 bool buzzerState = false;
