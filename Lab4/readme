@@ -1,0 +1,6 @@
+7digit:
+starts every segment of the digit, individually
+7digit-counter:
+automatically counts from 0 to 9 in a loop
+7digit-joystick:
+using a joystick, one can change the displayed number (from 0 to 9)
