@@ -10,3 +10,4 @@ X-axis cycles through the digits, allowing to select one and modify it (DP LED l
 
 Homework 4:
 Creating a menu for a game with the following submenus: Start, Highscore, Settings
+Illustrative video: https://youtu.be/sloUZXLM830
