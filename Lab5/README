@@ -1,1 +1,12 @@
-
+LCD-helloworld:
+printing "hello world" on the first line and "another message" on the second line
+ultrasonic:
+prints the distance
+ultrasonic_LCD:
+printing on the LCD the distance measured with the ultrasonic
+infrared:
+printing on Serial the values read from the remote
+remotecontrol:
+encoding each button from the remote and printing it
+remotebutton:
+printig which button was pushed on the remote control
