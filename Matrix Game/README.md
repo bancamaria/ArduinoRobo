@@ -24,3 +24,8 @@ The player has to break all the bricks with a ball which jumps on a platform. An
 - you can introduce your name to keep record of who had the highscore (highscore is saved in EEPROM);
 - there are levels;
 - each level increases the speed of the ball;
+
+Appearance of the hardware:
+https://ibb.co/QC1CBSv
+https://ibb.co/yBnjF14
+https://ibb.co/M89gsDx
