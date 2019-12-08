@@ -11,10 +11,11 @@ Hardware:
 - active buzzer
 - pushbutton
 - RGB LED
-- potentiometers
+- potentiometer
 - 10μF capacitor
 - 104 ceramic capacitor
 - wires
+- connector cable
 
 Description:
 The classic Breakout Game, but this time on an Arduino board!
