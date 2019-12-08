@@ -26,6 +26,9 @@ The player has to break all the bricks with a ball which jumps on a platform. An
 - each level increases the speed of the ball;
 
 Appearance of the hardware:
+
 https://ibb.co/QC1CBSv
+
 https://ibb.co/yBnjF14
+
 https://ibb.co/M89gsDx
