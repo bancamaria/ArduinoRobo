@@ -1,34 +1,36 @@
-The Breakout Game on a 8 × 8 LED matrix
+***The Breakout Game on a 8 × 8 LED matrix***
+
+-not finished-
 
 Hardware:
 - Arduino UNO board
-- breadboards
+- breadboard
 - 8 × 8 LED matrix
 - 16 × 2 LCD
 - MAX7219 Driver 
 - joystick
 - resistors
 - active buzzer
-- pushbutton
 - RGB LED
-- potentiometer
+- potentiometers
 - 10μF capacitor
 - 104 ceramic capacitor
 - wires
 - connector cable
 
-Description:
-The classic Breakout Game, but this time on an Arduino board!
-The player has to break all the bricks with a ball which jumps on a platform. And since we are in December, you can have a Christmassy song played while you are playing. But don't worry! If the songs are disturbing you, you can stop it by pressing the pushbutton!
-- there is a score;
-- you can introduce your name to keep record of who had the highscore (highscore is saved in EEPROM);
-- there are levels;
-- each level increases the speed of the ball;
-
 Appearance of the hardware:
 
-https://ibb.co/QC1CBSv
+https://ibb.co/Fsj7hPp
 
-https://ibb.co/yBnjF14
+Description:
+The classic Breakout Game, but this time on an Arduino board!
+The player has to break all the bricks with a ball which jumps on a platform. And since we are in December, you can have a Christmassy song played while you are playing.
+- there is a score and 3 lives;
+- you can introduce your name to keep record of who had the highscore (highscore is saved in EEPROM);
+- there are levels;
+- each level generates different configuration of bricks (each level adds a new bricks row)
 
-https://ibb.co/M89gsDx
+How to play:
+Using the potentiometer, you move the platform in order to catch the ball. The ball jumps and breaks a brick at a time. Game target: break all the bricks without letting the ball fall off the paddle.
+
+-TO DO: add rows, do something about the LCD, make the game playable without cancelling the song.
