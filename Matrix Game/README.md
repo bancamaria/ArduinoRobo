@@ -20,7 +20,7 @@ Hardware:
 
 Appearance of the hardware:
 
-https://ibb.co/Fsj7hPp
+https://ibb.co/T8chywM
 
 Description:
 The classic Breakout Game, but this time on an Arduino board!
@@ -33,4 +33,4 @@ The player has to break all the bricks with a ball which jumps on a platform. An
 How to play:
 Using the potentiometer, you move the platform in order to catch the ball. The ball jumps and breaks a brick at a time. Game target: break all the bricks without letting the ball fall off the paddle.
 
--TO DO: add rows, do something about the LCD, make the game playable without cancelling the song.
+_ _IN PROGRESS_ _: add rows, do something about the LCD, make the game playable without cancelling the song.
